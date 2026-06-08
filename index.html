@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buat Kesayanganku ❤️</title>
-
+    <title>buat riel, sayangku🤍</title>
     <style>
         body { 
             font-family: 'Quicksand', sans-serif; 
@@ -14,7 +13,6 @@
             margin: 0; 
             padding: 0; 
         }
-
         .container { 
             display: flex; 
             flex-direction: column; 
@@ -23,20 +21,17 @@
             height: 100vh; 
             padding: 20px; 
         }
-
         h1 { 
             color: #d6336c; 
             font-size: 2em; 
             text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
         }
-
         p { 
             color: #555; 
             font-size: 1.1em; 
             line-height: 1.6; 
             margin: 15px 0;
         }
-
         .btn { 
             background-color: #ff4d4d; 
             color: white; 
@@ -49,12 +44,10 @@
             transition: 0.3s; 
             margin-top: 20px;
         }
-
         .btn:hover { 
             background-color: #ff1a1a; 
             transform: scale(1.05); 
         }
-
         #message-box { 
             display: none; 
             background: rgba(255, 255, 255, 0.9); 
@@ -66,7 +59,6 @@
             position: relative; 
             animation: fadeIn 1s ease-in-out;
         }
-
         .photo-frame { 
             width: 150px; 
             height: 150px; 
@@ -75,7 +67,6 @@
             border: 5px solid #ffb3b3; 
             margin-bottom: 10px; 
         }
-
         .heart { 
             position: absolute; 
             color: #ff4d4d; 
@@ -83,107 +74,36 @@
             animation: floatUp linear forwards; 
             z-index: 1;
         }
-
         @keyframes floatUp { 
             0% { transform: translateY(100vh) scale(0); opacity: 1; } 
             100% { transform: translateY(-10vh) scale(1.5); opacity: 0; } 
         }
-
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
-
-        /* 💖 TOMBOL MUSIK */
-        #musicBtn{
-            position: fixed;
-            bottom: 20px;
-            left: 20px;
-            padding: 12px 18px;
-            border: none;
-            border-radius: 30px;
-            background: #ff4d88;
-            color: white;
-            font-size: 14px;
-            cursor: pointer;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-            z-index: 999;
-        }
-
-        #musicBtn:active{
-            transform: scale(0.95);
-        }
     </style>
-
+    <!-- Mengambil font lucu dari Google -->
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-
     <div class="container" id="main-container">
-        <h1 id="greeting">Hai, Kesayanganku! 💕</h1>
-        <button class="btn" id="openBtn">Ada pesan buat kamu, klik ya!</button>
+        <h1 id="greeting">hai, cintaku! 💕</h1>
+        <button class="btn" id="openBtn">ada pesan buat kamu, klik ya!</button>
 
         <div id="message-box">
-            <img src="https://via.placeholder.com/150/ffb3b3/ffffff?text=Foto+Kamu" class="photo-frame">
-            <h2>I Love You! 💖</h2>
-            <p>Semangat terus ya belajarnya di pondok! Masa-masa SMA ini pasti banyak rintangan.</p>
-            <p>Aku akan selalu ada di sini untuk kamu.</p>
+            <!-- Kamu bisa mengganti link gambar di bawah ini dengan link foto asli dia/kalian berdua -->
+            <img src="https://pin.it/3yAXe818W">
+            <h2>i love you so much! 💖</h2>
+            <p>hallo cintaku, makasi ya uda dateng ke kehidupan ku.</p>
+            <p>kamu tau ngga? kamu itu perfect banget di mata aku, uda cantik lucu baik manis imut, jadi satu deh</p>
+            <p>ill always love u sayang,kalo ada apa apa bilang ke aku yaa cintaa,semoga kita bisa selalu bersama,mwah i love u so much sayang. </p>
         </div>
     </div>
 
-    <!-- 🎵 AUDIO -->
-    <audio id="music" loop>
-        <source src="lagu.mp3" type="audio/mpeg">
-    </audio>
-
-    <!-- 🎵 BUTTON MUSIK -->
-    <button id="musicBtn">🎵 Play Musik</button>
-
     <script>
         document.getElementById('openBtn').addEventListener('click', function() {
-            this.style.display = 'none';
-            document.getElementById('greeting').style.display = 'none';
-            document.getElementById('message-box').style.display = 'block';
-
-            createHearts();
-            setInterval(createHearts, 300);
-        });
-
-        function createHearts() {
-            const heart = document.createElement('div');
-            heart.innerHTML = '❤️';
-            heart.classList.add('heart');
-            heart.style.left = Math.random() * 100 + 'vw';
-            heart.style.animationDuration = Math.random() * 3 + 2 + 's';
-            document.body.appendChild(heart);
-
-            setTimeout(() => {
-                heart.remove();
-            }, 5000);
-        }
-
-        // 🎵 MUSIK CONTROL
-        const music = document.getElementById("music");
-        const btn = document.getElementById("musicBtn");
-
-        let playing = false;
-
-        btn.addEventListener("click", function(){
-            if(!playing){
-                music.play();
-                btn.innerHTML = "⏸ Pause Musik";
-                playing = true;
-            } else {
-                music.pause();
-                btn.innerHTML = "🎵 Play Musik";
-                playing = false;
-            }
-        });
-    </script>
-
-</body>
-</html>            // Sembunyikan tombol dan sapaan awal
+            // Sembunyikan tombol dan sapaan awal
             this.style.display = 'none';
             document.getElementById('greeting').style.display = 'none';
             
@@ -216,6 +136,3 @@
     </script>
 </body>
 </html>
-
-<audio id="music" controls>
-<source src="music/lagu.mp3" type="audio/mpeg">
