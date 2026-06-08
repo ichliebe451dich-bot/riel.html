@@ -217,61 +217,6 @@
 </body>
 </html>
 
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-body{
-    margin:0;
-    font-family:Arial;
-}
-
-/* tombol kiri bawah */
-#musicBtn{
-    position:fixed;
-    bottom:20px;
-    left:20px;
-    padding:12px 18px;
-    border:none;
-    border-radius:30px;
-    background:#ff4d88;
-    color:white;
-    font-size:14px;
-    cursor:pointer;
-    box-shadow:0 4px 10px rgba(0,0,0,0.2);
-}
-
-#musicBtn:active{
-    transform:scale(0.95);
-}
-</style>
-</head>
-<body>
-
-<button id="musicBtn">🎵 Play Musik</button>
-
-<audio id="music" loop>
-    <source src="lagu.mp3" type="audio/mpeg">
+<audio id="music" controls>
+  <source src="lagu.mp3" type="audio/mpeg">
 </audio>
-
-<script>
-const music = document.getElementById("music");
-const btn = document.getElementById("musicBtn");
-
-let playing = false;
-
-btn.addEventListener("click", function(){
-    if(!playing){
-        music.play();
-        btn.innerHTML = "⏸ Pause Musik";
-        playing = true;
-    } else {
-        music.pause();
-        btn.innerHTML = "🎵 Play Musik";
-        playing = false;
-    }
-});
-</script>
-
-</body>
-</html>
